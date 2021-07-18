@@ -7,17 +7,17 @@
       name: apache2
       state: present
 
-  - name: i want to start service
-    apt: 
+  - name: start the service
+    service: 
       name: apache2
       state: started
 
   - name: i want to copy index file into all nodes
-    apt:
+    templates:
       src: myindex.j2
       dest: /var/www/html/index.html
 
   - name: restart the service
-    apt:
+    service:
       name: apache2
       state: restarted
