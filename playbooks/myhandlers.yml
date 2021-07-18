@@ -8,9 +8,9 @@
       state: present
     notify: startwebserver
 
-  - name: i want to copy my index file into all nodes
+  - name: i want to copy index file into all nodes
     template:
-      src: index.j2
+      src: myindex.j2
       dest: /var/www/html/index.html
     notify: startwebserver  
 
