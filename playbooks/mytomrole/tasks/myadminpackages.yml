@@ -1,7 +1,7 @@
 ---
 - name: install admin packages
   yum:
-    name: "{{items}}"
+    name: "{{item}}"
     state: present
   with_items:
     - tomcat-webapps
