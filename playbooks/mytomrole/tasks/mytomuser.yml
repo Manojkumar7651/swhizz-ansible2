@@ -1,0 +1,6 @@
+---
+- name: copy mytomuser.j2 file into all nodes
+  template:
+    src: template/mytomuser.j2
+    dest: /usr/share/tomcat/conf/tomcat-users.xml
+  notify: restarttomcat 
